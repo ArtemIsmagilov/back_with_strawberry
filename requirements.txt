@@ -1,0 +1,9 @@
+SQLAlchemy[asyncio]==2.0.29
+Cython==3.0.10
+strawberry-graphql[debug-server]==0.227.2
+ruff==0.4.2
+alembic==1.13.1
+asyncpg==0.29.0
+aiosqlite==0.20.0
+Faker==24.14.0
+python-dotenv==1.0.1
