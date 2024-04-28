@@ -13,7 +13,7 @@ async def get_main_list() -> list["TagTopic"]:
             topic_title=row.title,
             topic_description=row.description,
             tag_id=row.tag_id,
-            tag_name=row.name
+            tag_name=row.name,
         )
         for row in topics_tags
     ]

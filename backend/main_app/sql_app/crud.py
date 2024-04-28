@@ -6,13 +6,7 @@ from .models import Topic, Tag
 
 async def read_topics_tags(session: AsyncSession):
     stmt = (
-        select(
-            Topic.id,
-            Topic.title,
-            Topic.description,
-            Topic.tag_id,
-            Tag.name
-        )
+        select(Topic.id, Topic.title, Topic.description, Topic.tag_id, Tag.name)
         .join(Tag, Topic.tag_id == Tag.id)
         .order_by(Topic.id)
     )
