@@ -26,6 +26,7 @@ class Topic(Base):
     tag_id: Mapped[int] = mapped_column(
         sa.ForeignKey("tag.id", ondelete="CASCADE", onupdate="CASCADE")
     )
+
     tag: Mapped["Tag"] = relationship(back_populates="topics")
     materials: Mapped[list["Material"]] = relationship(back_populates="topic")
     pictures: Mapped[list["Picture"]] = relationship(back_populates="topic")
